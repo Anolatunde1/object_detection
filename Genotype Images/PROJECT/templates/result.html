@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detection Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Detection Result</h1>
+    <!-- Center the image with display: block; margin: 0 auto; -->
+    <img 
+      src="{{ url_for('static', filename='uploads/' + result_image) }}" 
+      alt="Result Image" 
+      style="max-width: 400px; height: 400px; display: block; margin: 0 auto;"
+    />
+    <a href="{{ url_for('index') }}">&#8592; Upload Another Image</a>
+  </div>
+</body>
+</html>
